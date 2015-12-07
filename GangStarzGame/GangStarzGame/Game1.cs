@@ -11,10 +11,14 @@ namespace GangStarzGame
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        private Texture2D background;
 
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
+            graphics.PreferredBackBufferWidth = 1366;  // set this value to the desired width of your window
+            graphics.PreferredBackBufferHeight = 700;   // set this value to the desired height of your window
+            graphics.ApplyChanges();
             Content.RootDirectory = "Content";
         }
 
@@ -39,6 +43,7 @@ namespace GangStarzGame
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            background = Content.Load<Texture2D>("images/bgr");
 
             // TODO: use this.Content to load your game content here
         }
@@ -75,7 +80,11 @@ namespace GangStarzGame
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            // TODO: Add your drawing code here
+            spriteBatch.Begin();
+
+            spriteBatch.Draw(background, new Rectangle(0, 0, 1366, 700), Color.White);
+
+            spriteBatch.End();
 
             base.Draw(gameTime);
         }
