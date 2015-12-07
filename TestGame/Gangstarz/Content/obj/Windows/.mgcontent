@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/Nadia/Documents/Visual Studio 2015/Projects/TestGame/Gangstarz/Content/Images/MainMap/MirrorMainMap.png</File>
+    <File>C:/Users/Nadia/Documents/Visual Studio 2015/Projects/TestGame/Gangstarz/Content/Images/Sprites/MainMap/Characters/Beat.png</File>
+    <File>C:/Users/Nadia/Documents/Visual Studio 2015/Projects/TestGame/Gangstarz/Content/Images/Sprites/MainMap/Effects/Flammes.png</File>
+    <File>C:/Users/Nadia/Documents/Visual Studio 2015/Projects/TestGame/Gangstarz/Content/Fonts/MainFont.spritefont</File>
+    <File>C:/Users/Nadia/Documents/Visual Studio 2015/Projects/TestGame/Gangstarz/Content/Fonts/SplashScreen_s20.spritefont</File>
+    <File>C:/Users/Nadia/Documents/Visual Studio 2015/Projects/TestGame/Gangstarz/Content/Fonts/SplashScreen_s45.spritefont</File>
+  </SourceFiles>
+</SourceFileCollection>

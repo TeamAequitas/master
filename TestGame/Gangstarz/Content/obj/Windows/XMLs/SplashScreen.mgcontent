@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>C:/Users/Nadia/Documents/Visual Studio 2015/Projects/TestGame/Gangstarz/Content/XMLs/SplashScreen.xml</SourceFile>
+  <SourceTime>2015-01-20T02:24:04+02:00</SourceTime>
+  <DestFile>C:/Users/Nadia/Documents/Visual Studio 2015/Projects/TestGame/Gangstarz/Content/bin/Windows/XMLs/SplashScreen.xnb</DestFile>
+  <DestTime>2015-12-06T10:58:54.6790657+02:00</DestTime>
+  <Importer>XmlImporter</Importer>
+  <ImporterTime>2015-04-29T20:14:44+03:00</ImporterTime>
+  <Processor>PassThroughProcessor</Processor>
+  <ProcessorTime>2015-04-29T20:14:44+03:00</ProcessorTime>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>
