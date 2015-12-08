@@ -163,5 +163,27 @@
                 effectList[effect].UnloadContent();
             }
         }
+
+        public void StoreEffects()
+        {
+            Effects = String.Empty;
+            foreach(var effect in effectList)
+            {
+                if (effect.Value.IsActive)
+                    Effects += effect.Key + ":";
+            }
+            if (Effects != String.Empty)           
+                Effects.Remove(Effects.Length - 1);//removing the last character
+        }
+
+        public void RestoreEffects()
+        {
+            foreach(var effect in effectList)
+                DeactivateEffect(effect.Key);
+
+            string[] data = Effects.Split(':');
+            foreach (string d in data)
+                ActivateEffect(d);
+        }
     }
 }

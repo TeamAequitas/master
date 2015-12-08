@@ -29,7 +29,13 @@ namespace Gangstarz.Managers
             menu.LoadContent();
             menu.OnMenuChange += Menu_OnMenuChange;
             menu.Transition(0.0f);
-         }
+
+            foreach (MenuItem item in menu.Items)
+            {
+                item.Image.StoreEffects();
+                item.Image.ActivateEffect("FadeEffect");
+            }
+        }
 
         private void Transition(GameTime gameTime)//do we need this?
         {
@@ -45,7 +51,14 @@ namespace Gangstarz.Managers
                         menu.Id = menu.Items[menu.ItemNumber].LinkId;
                     }
                     else if (first == 1.0f && last == 1.0f)
+                    {
                         isTransitioning = false;
+                        foreach (var item in menu.Items)
+                        {
+                            item.Image.RestoreEffects();
+                        }
+                    }
+                        
                 }
             }
         }
@@ -74,6 +87,11 @@ namespace Gangstarz.Managers
                 {
                     isTransitioning = true;
                     menu.Transition(1.0f);
+                    foreach(MenuItem item in menu.Items)
+                    {
+                        item.Image.StoreEffects();
+                        item.Image.ActivateEffect("FadeEffect");
+                    }
                 }
             }
 
