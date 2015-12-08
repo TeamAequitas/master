@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Gangstarz.Enumerations
+namespace Gangstarz.Items.Potion
 {
-    enum Map
+    abstract class Potion
     {
-        MainMap,
-
+        
     }
 }

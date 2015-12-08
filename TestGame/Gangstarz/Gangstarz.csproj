@@ -38,8 +38,14 @@
     <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Characters\Character.cs" />
+    <Compile Include="Characters\Gangster.cs" />
+    <Compile Include="Characters\MainCharacter.cs" />
     <Compile Include="Config\GameConfig.cs" />
     <Compile Include="Config\ScreensConfig.cs" />
+    <Compile Include="Items\Armor\Armor.cs" />
+    <Compile Include="Items\Potion\Potion.cs" />
+    <Compile Include="Items\Weapon\Weapon.cs" />
     <Compile Include="Managers\ScreenManager.cs" />
     <Compile Include="Managers\StateManager.cs" />
     <Compile Include="Enumerations\Map.cs" />
@@ -70,6 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Config\GameConfig\" />
+    <Folder Include="Interfaces\" />
     <Folder Include="Models\Entities\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
