@@ -62,7 +62,8 @@
         {            
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-
+            ScreenManager.Instance.GraphicsDevice = GraphicsDevice;//optimization
+            ScreenManager.Instance.Spritebatch = spriteBatch;
             ScreenManager.Instance.LoadContent(Content);
             //this.background = Content.Load<Texture2D>("Images/MainMap/MirrorMainMap");
             ////this.mainChar = Content.Load<Texture2D>("Images/Sprites/MainMap/Characters/Beat");

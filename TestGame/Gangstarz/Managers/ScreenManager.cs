@@ -4,6 +4,7 @@ using Gangstarz.Models.Screens.Proginitor;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using System.IO;
 
 namespace Gangstarz.Managers
 {
@@ -11,12 +12,16 @@ namespace Gangstarz.Managers
     {
         public static readonly Vector2 Dimensions = 
             new Vector2(ScreensConfig.ScreenWidth, ScreensConfig.ScreenHeight);
-
-        private static ScreenManager instance;
-
+        
         public ContentManager Content { get; private set; }
 
         public GameScreen CurrentScreen { get; private set; }
+
+        public XMLManager<GameScreen> xmlGameScreenManager;
+
+        private static ScreenManager instance;
+        public GraphicsDevice GraphicsDevice { get; set; }
+        public SpriteBatch Spritebatch { get; set; }
 
         public static ScreenManager Instance
         {
@@ -34,6 +39,10 @@ namespace Gangstarz.Managers
         public ScreenManager()
         {
             CurrentScreen = new SplashScreen();
+            xmlGameScreenManager = new XMLManager<GameScreen>();
+            xmlGameScreenManager.Type = CurrentScreen.Type;
+            CurrentScreen = xmlGameScreenManager.Load(Path.Combine(ScreensConfig.PathToConfigFolder, 
+                CurrentScreen.Type.Name + "." + ScreensConfig.FileExtension));
         }
 
         public void LoadContent(ContentManager Content)

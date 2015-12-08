@@ -4,9 +4,9 @@
     using System.IO;
     using System.Xml.Serialization;   
 
-    public class XTMLManager<T>
+    public class XMLManager<T>
     {
-        public Type Type { get; private set; }
+        public Type Type { get; set; }
 
         public T Load(string path)
         {

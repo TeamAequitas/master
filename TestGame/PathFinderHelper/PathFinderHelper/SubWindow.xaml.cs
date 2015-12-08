@@ -25,12 +25,12 @@ namespace PathFinderHelper
         private static readonly Color clickedRec = Color.FromArgb(0, 250, 180, 255);
         private static readonly Color recBorder = Color.FromArgb(150, 255, 255, 255);
 
-        private const int MaxWinWidth = 1500;
+        private const int MaxWinWidth = 1400;
         private const int MaxWinHeight = 1000;
-        private const int PicMargeHorizontal = 20;
-        private const int PicMargeVertical = 40;
+        private const int PicMargeHorizontal = 40;
+        private const int PicMargeVertical = 80;
         private const string GameName = "AequitasGame";
-        private const string PathToOutputFile = "Resources/Images/MainMap/Text";
+        private const string PathToOutputFile = "Content/Text";
         private const string OutpuFileName = "ImgMatrixInfo";
         private const string FileExtension = "txt";
 
@@ -47,6 +47,7 @@ namespace PathFinderHelper
         public SubWindow()
         {
             InitializeComponent();
+            this.Background = new ImageBrush(new BitmapImage(new Uri(@"pack://application:,,,/myapp;component/Images/icon.png")));
         }
 
         public SubWindow(int picHeight, int picWidth, int picDivider, OpenFileDialog dlg)

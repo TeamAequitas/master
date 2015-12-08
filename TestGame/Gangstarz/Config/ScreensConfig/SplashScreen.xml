@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SplashScreen>  
+  <Image>
+    <Path>Images/Other/speeding-bullet-12795947</Path>
+    <Position>
+      <X>700</X>
+      <Y>700</Y>
+    </Position>
+    <Scale>
+      <X>0.8</X>
+      <Y>0.8</Y>
+    </Scale>
+    <Rotation>-90</Rotation>
+    <FontName>Fonts/MainFont</FontName>
+  </Image>
+  <GameName>Gangstarz</GameName>
+  <Credits>by Team Aequitas</Credits>
+  <MainFont>Fonts/MainFont</MainFont>
+  <Font_s20>Fonts/SplashScreen_s20</Font_s20>
+  <Font_s45>Fonts/SplashScreen_s45</Font_s45>
+</SplashScreen>

@@ -9,13 +9,16 @@
     using System;
     using System.Xml.Serialization;
 
-    public class GameScreen
-    {
-        protected ContentManager Content { get; private set; }
+    public abstract class GameScreen
+    {   
         [XmlIgnore]
         public Type Type;
 
         protected SpriteFont Font { get; set; }
+
+        public string MainFont { get; set; }
+
+        protected ContentManager Content { get; private set; }
 
         public GameScreen()
         {
@@ -27,7 +30,7 @@
             Content = new ContentManager(
                 ScreenManager.Instance.Content.ServiceProvider, "Content");
 
-            this.Font = Content.Load<SpriteFont>(ScreensConfig.GameFont);
+            this.Font = Content.Load<SpriteFont>(MainFont);
         }
 
         public virtual void UnloadContent()

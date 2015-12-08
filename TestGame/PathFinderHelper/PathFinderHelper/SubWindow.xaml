@@ -7,12 +7,24 @@
         mc:Ignorable="d"
         Title="SubWindow" Height="300" Width="300">
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Resources/BG0016.png"/>
+        </Grid.Background>
         <ScrollViewer HorizontalAlignment="Left" Height="auto" VerticalAlignment="Top" Width="auto" Name="scroller" HorizontalScrollBarVisibility="auto" VerticalScrollBarVisibility="Auto" >
             <Grid Name="Test" Height="auto" Width="auto">
-                <UniformGrid Name="UniGrid" />
+                <UniformGrid Name="UniGrid" />                
             </Grid>
         </ScrollViewer>
 
-        <Button x:Name="GenerateMatrix" Content="Generate" HorizontalAlignment="right" Height="22" Margin="0,0,5,5" VerticalAlignment="bottom" Width="65" Click="GenerateMatrix_Click"/>
+        <Button x:Name="GenerateMatrix" Content="Generate" HorizontalAlignment="right" Height="22" Margin="0,0,5,5" VerticalAlignment="bottom" Width="65" Click="GenerateMatrix_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FF9B96B6" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>
