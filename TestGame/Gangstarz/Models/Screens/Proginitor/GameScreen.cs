@@ -7,6 +7,7 @@
     using Microsoft.Xna.Framework.Content;
     using Microsoft.Xna.Framework.Graphics;
     using System;
+    using System.IO;
     using System.Xml.Serialization;
 
     public abstract class GameScreen
@@ -20,9 +21,13 @@
 
         protected ContentManager Content { get; private set; }
 
+        public string XmlPath { get; set; }
+
         public GameScreen()
         {
             this.Type = this.GetType();
+            XmlPath = Path.Combine(ScreensConfig.PathToConfigFolder, 
+                        this.GetType().Name + "." + ScreensConfig.FileExtension);
         }
 
         public virtual void LoadContent()
@@ -30,7 +35,8 @@
             Content = new ContentManager(
                 ScreenManager.Instance.Content.ServiceProvider, "Content");
 
-            this.Font = Content.Load<SpriteFont>(MainFont);
+            if (!string.IsNullOrEmpty(MainFont))            
+                this.Font = Content.Load<SpriteFont>(MainFont);
         }
 
         public virtual void UnloadContent()
@@ -40,6 +46,7 @@
 
         public virtual void Update(GameTime gameTime)
         {
+            InputManager.Instance.Update();
         }
 
         public virtual void Draw(SpriteBatch spriteBatch)

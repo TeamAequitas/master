@@ -8,6 +8,11 @@
     {
         public Type Type { get; set; }
 
+        public XMLManager()
+        {
+            Type = typeof(T);
+        }
+
         public T Load(string path)
         {
             T instance;

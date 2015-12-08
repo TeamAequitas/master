@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ScreenManager>
+  <Image>
+    <Path>Images/ScreenManager/FadeImage</Path>
+    <Scale>
+      <X>2500</X>
+      <Y>2000</Y>
+    </Scale>
+    <Effects>FadeEffect</Effects>
+    <FontName>Fonts/MainFont</FontName>
+  </Image>
+  <Font_s20>Fonts/SplashScreen_s20</Font_s20>
+  <Font_s45>Fonts/SplashScreen_s45</Font_s45>
+</ScreenManager>

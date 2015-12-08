@@ -9,5 +9,6 @@
 
         public const string PathToConfigFolder = "Config/ScreensConfig";
         public const string FileExtension = "xml";
+        public const string MainFont = "Fonts/MainFont";
     }
 }

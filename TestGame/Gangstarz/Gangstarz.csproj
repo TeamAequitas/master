@@ -37,23 +37,34 @@
   <PropertyGroup>
     <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Gangstarz.Gangstarz</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Characters\Character.cs" />
-    <Compile Include="Characters\Gangster.cs" />
-    <Compile Include="Characters\MainCharacter.cs" />
-    <Compile Include="Config\GameConfig.cs" />
+    <Compile Include="Config\MenusConfig.cs" />
     <Compile Include="Config\ScreensConfig.cs" />
-    <Compile Include="Items\Armor\Armor.cs" />
-    <Compile Include="Items\Potion\Potion.cs" />
-    <Compile Include="Items\Weapon\Weapon.cs" />
+    <Compile Include="Managers\InputManager.cs" />
+    <Compile Include="Managers\ManuManager.cs" />
     <Compile Include="Managers\ScreenManager.cs" />
     <Compile Include="Managers\StateManager.cs" />
     <Compile Include="Enumerations\Map.cs" />
     <Compile Include="Gangstarz.cs" />
     <Compile Include="Managers\XMLManager.cs" />
+    <Compile Include="Models\Entities\Characters\Gangster.cs" />
+    <Compile Include="Models\Entities\Characters\MainCharacter.cs" />
+    <Compile Include="Models\Entities\Characters\Parent\Character.cs" />
+    <Compile Include="Models\Entities\Items\Armor\Armor.cs" />
+    <Compile Include="Models\Entities\Items\Potion\Potion.cs" />
+    <Compile Include="Models\Entities\Items\Weapon\Weapon.cs" />
+    <Compile Include="Models\Entities\Proginitor\GameObject.cs" />
+    <Compile Include="Models\Images\Effects\FadeEffect.cs" />
+    <Compile Include="Models\Images\Effects\Proginitor\ImageEffect.cs" />
     <Compile Include="Models\Images\Proginitor\Image.cs" />
+    <Compile Include="Models\Menus\Menu.cs" />
+    <Compile Include="Models\Menus\MenuItem.cs" />
     <Compile Include="Models\Screens\Proginitor\GameScreen.cs" />
     <Compile Include="Models\Screens\SplashScreen.cs" />
+    <Compile Include="Models\Screens\TitleScreen.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Removable\AnimatedSprite.cs" />
   </ItemGroup>
@@ -65,7 +76,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Config\MenusConfig\TitleMenu.xml" />
+    <Content Include="Config\ScreensConfig\ScreenManager.xml" />
     <Content Include="Config\ScreensConfig\SplashScreen.xml" />
+    <Content Include="Config\ScreensConfig\TitleScreen.xml" />
     <Content Include="Content\Text\ImgMatrixInfo.txt" />
     <Content Include="Icon.ico" />
   </ItemGroup>
@@ -76,8 +90,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Config\GameConfig\" />
-    <Folder Include="Interfaces\" />
-    <Folder Include="Models\Entities\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />

@@ -12,9 +12,16 @@
     </Scale>
     <Rotation>-90</Rotation>
     <FontName>Fonts/MainFont</FontName>
+    <Effects>FadeEffect</Effects>
+    <FadeEffect>
+      <FadeSpeed>1.5</FadeSpeed>
+    </FadeEffect>
+    <IsActive>true</IsActive>
   </Image>
+  <NextScreen>TitleScreen</NextScreen>
   <GameName>Gangstarz</GameName>
   <Credits>by Team Aequitas</Credits>
+  <GameNameFont>Fonts/MainFont</GameNameFont>
   <MainFont>Fonts/MainFont</MainFont>
   <Font_s20>Fonts/SplashScreen_s20</Font_s20>
   <Font_s45>Fonts/SplashScreen_s45</Font_s45>
