@@ -1,6 +1,7 @@
 ﻿using Gangstarz.Models.Menus;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,8 @@ namespace Gangstarz.Managers
     {
         private Menu menu;
 
+        private bool isTransitioning;
+
         public ManuManager()
         {
             menu = new Menu();
@@ -22,9 +25,30 @@ namespace Gangstarz.Managers
         {
             XMLManager<Menu> xmlManager = new XMLManager<Menu>();
             menu.UnloadContent();
-            menu = xmlManager.Load(menu.Id);
-            menu.LoadContent();  
+            menu = xmlManager.Load(menu.Id);//we r loading brand new menu
+            menu.LoadContent();
+            menu.OnMenuChange += Menu_OnMenuChange;
+            menu.Transition(0.0f);
          }
+
+        private void Transition(GameTime gameTime)//do we need this?
+        {
+            if (isTransitioning)
+            {
+                for (int i = 0; i < menu.Items.Count; i++)
+                {
+                    menu.Items[i].Image.Update(gameTime);
+                    float first = menu.Items[0].Image.Alpha;
+                    float last = menu.Items[menu.Items.Count - 1].Image.Alpha;
+                    if (first == 0.0f && last == 0.0f)
+                    {
+                        menu.Id = menu.Items[menu.ItemNumber].LinkId;
+                    }
+                    else if (first == 1.0f && last == 1.0f)
+                        isTransitioning = false;
+                }
+            }
+        }
 
         public void LoadContent(string menuPath)
         {
@@ -39,7 +63,21 @@ namespace Gangstarz.Managers
 
         public void Update(GameTime gameTime)
         {
-            menu.Update(gameTime);
+            if (!isTransitioning)
+                menu.Update(gameTime);
+
+            if (InputManager.Instance.KeyPressed(Keys.Enter) && !isTransitioning)
+            {
+                if (menu.Items[menu.ItemNumber].LinkType == "Screen")
+                    ScreenManager.Instance.SwitchScreens(menu.Items[menu.ItemNumber].LinkId);
+                else
+                {
+                    isTransitioning = true;
+                    menu.Transition(1.0f);
+                }
+            }
+
+            Transition(gameTime);
         }
 
         public void Draw(SpriteBatch spriteBatch)

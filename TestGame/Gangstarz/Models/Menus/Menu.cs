@@ -21,6 +21,11 @@ namespace Gangstarz.Models.Menus
         private string id;//inherited from GameObject?
         private int itemNumber;
 
+        public int ItemNumber
+        {
+            get { return itemNumber; }
+        }
+
         public event EventHandler OnMenuChange;
 
         public Menu()
@@ -39,6 +44,19 @@ namespace Gangstarz.Models.Menus
             {
                 id = value;
                 OnMenuChange(this, null);//it calls all the methods we want to call
+            }
+        }
+
+        public void Transition(float alpha)
+        {
+            foreach (var item in Items)
+            {
+                item.Image.IsActive = true;
+                item.Image.Alpha = alpha;
+                if (alpha == 0.0f)
+                    item.Image.fadeEffect.Increase = true;
+                else
+                    item.Image.fadeEffect.Increase = false;
             }
         }
 

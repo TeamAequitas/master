@@ -8,8 +8,8 @@ namespace Gangstarz.Models.Menus
 {
     public class MenuItem
     {
-        public string LinkType { get; set; }
-        public string LinkId { get; set; }
+        public string LinkType { get; set; }//whether is linked to menu or the screen
+        public string LinkId { get; set; }//linked to which item (Splash screen)
         public Image Image { get; set; }
     }
 }

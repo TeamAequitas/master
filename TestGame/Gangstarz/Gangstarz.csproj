@@ -76,6 +76,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Config\MenusConfig\TestMenu.xml" />
     <Content Include="Config\MenusConfig\TitleMenu.xml" />
     <Content Include="Config\ScreensConfig\ScreenManager.xml" />
     <Content Include="Config\ScreensConfig\SplashScreen.xml" />
