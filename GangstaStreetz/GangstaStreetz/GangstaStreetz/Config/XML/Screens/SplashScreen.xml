@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SplashScreen>
+  <NextScreen>TitleScreen</NextScreen>
+  <FadeSpeed>1</FadeSpeed>
+  <Image>
+    <Text>Bla Bla Bla</Text>
+    <Path>Images/Screens/SplashScreen/Smiley</Path>
+    <PositionUpLeft>
+      <X>700</X>
+      <Y>700</Y>
+    </PositionUpLeft>
+    <Scale>
+      <X>4</X>
+      <Y>4</Y>
+    </Scale>
+    <Rotation>0</Rotation> 
+  </Image>    
+</SplashScreen>

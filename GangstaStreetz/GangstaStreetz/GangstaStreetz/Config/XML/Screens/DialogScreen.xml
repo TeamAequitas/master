@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DialogScreen>
+  <Image>
+    <!--background-->
+    <Path>Images/Screens/DialogScreens/BG02</Path>
+    <PositionUpLeft>
+      <X>840</X>
+      <Y>500</Y>
+    </PositionUpLeft>
+    <Scale>
+      <X>1</X>
+      <Y>1</Y>
+    </Scale>
+    <Rotation>0</Rotation>
+  </Image>
+    
+  <Image>
+    <Text>Dialog 1</Text>
+    <PositionUpLeft>
+      <X>700</X>
+      <Y>700</Y>
+    </PositionUpLeft>
+    <Scale>
+      <X>2</X>
+      <Y>2</Y>
+    </Scale>
+    <Rotation>0</Rotation>
+  </Image>
+  
+  <Image>
+    <Text>Dialog 2</Text>
+    <PositionUpLeft>
+      <X>1000</X>
+      <Y>700</Y>
+    </PositionUpLeft>
+    <Scale>
+      <X>1</X>
+      <Y>1</Y>
+    </Scale>
+    <Rotation>0</Rotation>
+  </Image>
+
+  <!--<Button>
+    <Text>I am a button 1</Text>
+    --><!--<LinkTo>Screen</LinkTo>
+    <LinkName>SplashScreen</LinkName>--><!--
+  </Button>
+  <Button>
+    <Text>I am a button 2</Text>
+    --><!--<LinkTo>Screen</LinkTo>
+    <LinkName>DialogScreen</LinkName>--><!--
+  </Button>-->      
+</DialogScreen>

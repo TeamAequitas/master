@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<TitleScreen>
+  <TitleMenu>
+    <Margin>20</Margin>
+    <MenuFont>Fonts/TitleMenuFont</MenuFont>
+    <MenuCenter>
+      <X>840</X>
+      <Y>500</Y>
+    </MenuCenter> 
+    
+      <Button>
+        <Text>New Game</Text>
+        <LinkTo>Screen</LinkTo>
+        <LinkName>SplashScreen</LinkName>
+      </Button>
+      <Button>
+        <Text>Options</Text>
+        <LinkTo>Screen</LinkTo>
+        <LinkName>DialogScreen</LinkName>
+      </Button>
+      <Button>
+        <Text>Exit</Text>
+      </Button>   
+    
+    <Alignment>Y</Alignment>        
+  </TitleMenu>  
+</TitleScreen>
