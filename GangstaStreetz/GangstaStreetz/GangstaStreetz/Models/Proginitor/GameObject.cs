@@ -2,6 +2,6 @@
 {
     public class GameObject
     {
-        public static string Name { get; set; }
+        public static string Id { get; set; }
     }
 }

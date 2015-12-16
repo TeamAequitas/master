@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Beat>
+  <Image>
+    <Path>Images/Characters/MainMap/BeatAll</Path>
+    <AmountOfFrames>8</AmountOfFrames>
+    <FrameWidth>34</FrameWidth>
+    <FrameWidth>43</FrameWidth>
+    <FrameWidth>35</FrameWidth>
+    <FrameWidth>35</FrameWidth>
+    <FrameWidth>43</FrameWidth>
+    
+    <TilePosition>
+      <X>0</X>
+      <Y>3</Y>
+    </TilePosition>
+    <MoveSpeed>100</MoveSpeed>   
+  </Image>  
+</Beat>

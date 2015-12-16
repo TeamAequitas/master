@@ -11,7 +11,7 @@
       <Button>
         <Text>New Game</Text>
         <LinkTo>Screen</LinkTo>
-        <LinkName>SplashScreen</LinkName>
+        <LinkName>MainMapScreen</LinkName>
       </Button>
       <Button>
         <Text>Options</Text>

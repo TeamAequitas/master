@@ -68,6 +68,9 @@
                 case "dialogscreen":
                         CurrentScreen = new DialogScreen();
                     break;
+                case "mainmapscreen":
+                    CurrentScreen = new MainMapScreen();
+                    break;
                 default:
                     CurrentScreen = new SplashScreen();
                     break;                    

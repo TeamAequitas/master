@@ -11,6 +11,7 @@
         public const string PathToSwitchScreen = "../GangstaStreetzContent/Images/Screens/SwitchBackground";
 
         public const string PathToGameFont = "Fonts/GameFont";
+        public const int TileDimension = 25;
         public static readonly Vector2 ScreenDimensions = new Vector2(1680, 1000);
     }
 }

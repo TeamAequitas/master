@@ -30,12 +30,6 @@
     <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.VideoImporters, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\GameLibrary\GameLibrary.csproj">
-      <Project>{e4ff8175-28b1-4109-bc08-33153da4a8c6}</Project>
-      <Name>GameLibrary</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Fonts\GameFont.spritefont">
       <Name>GameFont</Name>
       <Importer>FontDescriptionImporter</Importer>
@@ -43,6 +37,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Images\Screens\MainMapScreen\MirrorMainMap.png">
+      <Name>MirrorMainMap</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
     <Compile Include="Images\Screens\SwitchBackground.jpg">
       <Name>SwitchBackground</Name>
       <Importer>TextureImporter</Importer>
@@ -66,6 +65,13 @@
   <ItemGroup>
     <Compile Include="Images\Screens\DialogScreens\BG02.jpg">
       <Name>BG02</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Images\Characters\MainMap\BeatAll.jpg">
+      <Name>BeatAll</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
